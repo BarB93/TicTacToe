@@ -23,12 +23,10 @@ class Game extends React.Component {
         if (calculateWinner(squares) || squares[index]) return
 
         squares[index] = this.state.xIsNext ? 'X' : 'O'
-
         this.setState({
             history: history.concat([{squares}]),
             xIsNext: !this.state.xIsNext,
             stepNumber: history.length
-
         })
     }
 
@@ -49,12 +47,13 @@ class Game extends React.Component {
                 `Перейти к ходу #${move}`
                 : `Перейти к началу игры`
 
+
             return (
-                <li key={move}>
-                    <button onClick={() => this.jumpTo(move)}>
+                <tr key={move}>
+                    <td className={'table_data ' + (move === this.state.stepNumber? 'current' : '')} onClick={() => this.jumpTo(move)}>
                         {desc}
-                    </button>
-                </li>
+                    </td>
+                </tr>
             )
         })
 
@@ -68,8 +67,8 @@ class Game extends React.Component {
                     <Board  onClick={(i) => this.handleClick(i)} squares={current.squares}/>
                 </div>
                 <div className="game-info">
-                    <div>{status}</div>
-                    <ol>{moves}</ol>
+                    <div className='status'>{status}</div>
+                    <table><tbody>{moves}</tbody></table>
                 </div>
             </div>
         );

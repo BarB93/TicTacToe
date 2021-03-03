@@ -11,25 +11,25 @@ class Board extends React.Component {
                        }/>;
     }
 
+    renderTicTacField(rows, columns) {
+        const squares = Array(rows * columns).fill(null).map((item, index) => {
+            return this.renderSquare(index)
+        })
+
+        const result = []
+        for(let i = 0; i < squares.length; i += columns) {
+            const row = squares.slice(i, i + columns)
+            result.push(<div className='board-row'>{row}</div>)
+        }
+
+        return result
+    }
+
     render() {
 
         return (
             <div>
-                <div className="board-row">
-                    {this.renderSquare(0)}
-                    {this.renderSquare(1)}
-                    {this.renderSquare(2)}
-                </div>
-                <div className="board-row">
-                    {this.renderSquare(3)}
-                    {this.renderSquare(4)}
-                    {this.renderSquare(5)}
-                </div>
-                <div className="board-row">
-                    {this.renderSquare(6)}
-                    {this.renderSquare(7)}
-                    {this.renderSquare(8)}
-                </div>
+                {this.renderTicTacField(3,3)}
             </div>
         );
 

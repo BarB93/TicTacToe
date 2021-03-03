@@ -3,8 +3,25 @@ body {
   margin: 20px;
 }
 
-ol, ul {
-  padding-left: 30px;
+table,tr,td {
+  border:1px solid #000;
+  border-collapse: collapse;
+}
+
+.table_data {
+  padding: 5px 7px;
+  background: #e8e2e2;
+  cursor: pointer;
+
+  transition: background-color .3s linear;
+}
+
+.table_data:hover {
+  background: #c2baba;
+}
+
+.table_data.current {
+  background: #c2baba;
 }
 
 .board-row:after {
@@ -18,18 +35,21 @@ ol, ul {
 }
 
 .square {
-  background: #fff;
+  height: 44px;
+  width: 44px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+
   border: 1px solid #999;
+  background: #fff;
+
   float: left;
   font-size: 24px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
   text-align: center;
-  width: 34px;
+
 }
 
 .square:focus {
@@ -42,9 +62,14 @@ ol, ul {
 
 .game {
   display: flex;
+  justify-content: center;
   flex-direction: row;
 }
 
 .game-info {
   margin-left: 20px;
+}
+
+.status {
+  margin: 0 0 10px 0;
 }
