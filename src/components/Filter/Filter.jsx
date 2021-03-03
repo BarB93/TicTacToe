@@ -8,7 +8,7 @@ const Filter = (props) => {
         : <img className='img_filter' src={down_arrow} alt="Ходы по убыванию" title="Ходы по убыванию"/>
     return (
         <div className='list_filter'>
-            Фильтр: {<button onClick={props.sortList} className='btn_filter'>{img}</button>}
+            Фильтр: {<button onClick={props.onClik} className='btn_filter'>{img}</button>}
         </div>
     )
 }

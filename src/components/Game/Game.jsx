@@ -1,6 +1,7 @@
 import React from 'react'
 import Board from "../Board/Board";
 import {calculateWinner} from "../../functions/functions";
+import Filter from "../Filter/Filter";
 
 class Game extends React.Component {
     constructor(props) {
@@ -12,6 +13,7 @@ class Game extends React.Component {
                 }],
             xIsNext: true,
             stepNumber: 0,
+            isReverseHistoryList: false
         }
     }
 
@@ -37,12 +39,19 @@ class Game extends React.Component {
         })
     }
 
+    sortList = () => {
+        this.setState({
+            isReverseHistoryList: !this.state.isReverseHistoryList
+        })
+    }
+
     render() {
         const history = this.state.history
         const current = history[this.state.stepNumber]
         const winner = calculateWinner(current.squares)
 
         const moves = history.map((step, move) => {
+            if(this.state.isReverseHistoryList) move = history.length - 1 - move
             const desc = move ?
                 `Перейти к ходу #${move}`
                 : `Перейти к началу игры`
@@ -68,6 +77,7 @@ class Game extends React.Component {
                 </div>
                 <div className="game-info">
                     <div className='status'>{status}</div>
+                    <Filter isReverseHistoryList={this.state.isReverseHistoryList} onClik={this.sortList}/>
                     <table><tbody>{moves}</tbody></table>
                 </div>
             </div>

@@ -73,3 +73,30 @@ table,tr,td {
 .status {
   margin: 0 0 10px 0;
 }
+
+.btn_filter {
+  width: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn_filter:focus {
+  outline: none;
+}
+
+.btn_filter:hover {
+  background: #e8e2e2;
+}
+
+.list_filter {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px 0;
+
+}
+
+.img_filter {
+  width: 100%;
+  height: auto;
+}
