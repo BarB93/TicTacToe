@@ -4,11 +4,13 @@ import Square from "../Square/Square";
 class Board extends React.Component {
 
     renderSquare(i) {
+        const isActive = this.props.squaresWin.includes(i)
         return <Square value={this.props.squares[i]}
                        onClick={() => {
                            this.props.onClick(i)
-                       }
-                       }/>;
+                       }}
+                       isActive={isActive}
+        />;
     }
 
     renderTicTacField(rows, columns) {
