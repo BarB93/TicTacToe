@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/TicTacToe/static/css/main.72c402ce.chunk.css",
+    "main.js": "/TicTacToe/static/js/main.fee8f8d3.chunk.js",
+    "main.js.map": "/TicTacToe/static/js/main.fee8f8d3.chunk.js.map",
+    "runtime-main.js": "/TicTacToe/static/js/runtime-main.f43748d5.js",
+    "runtime-main.js.map": "/TicTacToe/static/js/runtime-main.f43748d5.js.map",
+    "static/js/2.ac04d913.chunk.js": "/TicTacToe/static/js/2.ac04d913.chunk.js",
+    "static/js/2.ac04d913.chunk.js.map": "/TicTacToe/static/js/2.ac04d913.chunk.js.map",
+    "index.html": "/TicTacToe/index.html",
+    "static/css/main.72c402ce.chunk.css.map": "/TicTacToe/static/css/main.72c402ce.chunk.css.map",
+    "static/js/2.ac04d913.chunk.js.LICENSE.txt": "/TicTacToe/static/js/2.ac04d913.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/TicTacToe/static/media/FredokaOne-Regular.e0ca5167.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f43748d5.js",
+    "static/js/2.ac04d913.chunk.js",
+    "static/css/main.72c402ce.chunk.css",
+    "static/js/main.fee8f8d3.chunk.js"
+  ]
+}
